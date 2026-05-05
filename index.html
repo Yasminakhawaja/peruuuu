@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>PeruXplore</title>
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <img src="logo/logo.webp" alt="logo" class="logo" />
+      </div>
+      <div>
+        <h1>PeruXplore</h1>
+      </div>
+      <div>
+        <button class="menu-button" aria-controls="menu-dialog">
+          ☰
+          <span class="sr-only">Åbn menu</span>
+        </button>
+        <dialog id="menu-dialog" class="menu">
+          <button class="close-button">✕</button>
+          <nav>
+            <ul>
+              <li><a href="index.html">Forside</a></li>
+            </ul>
+          </nav>
+        </dialog>
+      </div>
+    </header>
+    <script>
+      const dialog = document.querySelector("#menu-dialog");
+      const openBtn = document.querySelector(".menu-button");
+      const closeBtn = document.querySelector(".close-button");
+
+      openBtn.addEventListener("click", () => dialog.showModal());
+      closeBtn.addEventListener("click", () => dialog.close());
+
+      dialog.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => dialog.close()));
+    </script>
+    <main>
+      <div class="start-side">
+        <img src="img/machupichu.webp" alt="machupichu" />
+      </div>
+      <div class="grid1-1">
+        <div class="grid1-1-tekst">
+          <h2>Bedste serværdigheder i Peru</h2>
+          <h3>Opdag Peru fra Lima, Cusco, Paracas, Huacachina & Machu Picchu</h3>
+          <p>Lima er Perus pulserende hovedstad og en perfekt start på din rejse. Byen er kendt som Sydamerikas gastronomiske centrum, Lima byder på spændende kvarterer som Barranco med kunst og livemusik, og en smuk kystlinje ud mod Stillehavet</p>
+          <p>Cusco var engang hovedstad i Inkariget og er i dag en af Perus mest fascinerende byer. Her mødes historie og nutid i brostensbelagte gader, gamle templer og koloniale bygninger.</p>
+          <p>Paracas er kendt for sin vilde natur og fantastiske dyreliv. Her kan du tage på bådtur til Ballestas-øerne og opleve søløver, pingviner og tusindvis af fugle helt tæt på</p>
+          <p>Forestil dig en oase omgivet af kæmpe sandklitter, det er Huacachina. Her kan du prøve sandboarding eller tage på hæsblæsende buggy-ture gennem ørkenen.</p>
+          <p>
+            Ingen rejse til Peru er komplet uden et besøg til Machu Picchu. Denne ikoniske inkaby, gemt højt i Andesbjergene, er et af verdens mest imponerende arkæologiske steder. Uanset om du vandrer dertil via Inka-stien eller tager toget, er
+            oplevelsen intet mindre end magisk.
+          </p>
+        </div>
+        <div>
+          <img src="img/wakachina.webp" alt="wakachina" />
+        </div>
+      </div>
+      <div class="galleri-tekst">
+        <h3>Galleri af billeder fra Peru</h3>
+      </div>
+      <div class="galleri">
+        <img src="img/lima2.webp" alt="Lima" class="big" />
+        <img src="img/machupichu2.webp" alt="machupichu" class="top" />
+        <img src="img/cusco2.webp" alt="cusco" class="small" />
+        <img src="img/paracas.webp" alt="paracas" class="small" />
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

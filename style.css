@@ -1,0 +1,147 @@
+@font-face {
+  font-family: Permanent;
+  src: url(fonts/PermanentMarker-Regular.woff2);
+  font-display: swap;
+}
+body {
+  background-color: #d9c3a9;
+  margin: 0;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.header h1 {
+  color: #bf755a;
+  font-family: Permenent;
+}
+.start-side img {
+  gap: 40px;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+.sr-only {
+  position: absolute;
+  left: -9999px;
+}
+
+.menu-button {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* dialog */
+.menu {
+  border: none;
+  padding: 2rem;
+  width: 250px;
+  height: 100vh;
+  margin: 0;
+}
+
+/* backdrop */
+.menu::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.start-side h1 {
+  font-size: 20px;
+}
+.start-side img {
+  width: 100%;
+}
+.grid1-1 img {
+  width: 100%;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.5);
+}
+.galleri img {
+  width: 100%;
+}
+footer {
+  padding: 30x;
+}
+footer h1 {
+  font-family: Permanent;
+  text-align: center;
+}
+@media (max-width: 800px) {
+  .galleri {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .galleri img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+}
+@media (min-width: 800px) {
+  .grid1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 5px;
+    align-items: start;
+  }
+  .grid1-1 img {
+    grid-row: 1;
+    grid-column: 1;
+    width: 100%;
+  }
+  .grid1-1-tekst {
+    margin-left: 5px;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .galleri {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 10px;
+  }
+  .galleri img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .big {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+  }
+  .top {
+    grid-column: 2 / 4;
+  }
+  .small:nth-child(3) {
+    grid-column: 2 / 3;
+  }
+  .small:nth-child(4) {
+    grid-column: 3 / 4;
+  }
+}
